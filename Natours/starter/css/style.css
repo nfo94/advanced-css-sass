@@ -10,7 +10,7 @@
 *::before{
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html{ font-size: 62.5%; }
@@ -21,7 +21,7 @@ body{
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 .header{
