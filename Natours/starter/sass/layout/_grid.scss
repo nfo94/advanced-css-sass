@@ -1,0 +1,12 @@
+.row{
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  &:not(:last-child){
+    margin-bottom: $gutter-vertical;
+  }
+  .col-1-of-2{
+    
+  }
+}
