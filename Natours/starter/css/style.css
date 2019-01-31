@@ -161,7 +161,13 @@ body {
 
 .btn-text:hover {
   color: #fff;
-  background-color: #55c57a; }
+  background-color: #55c57a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translate(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
 
 .section-about {
   background: #f7f7f7;
