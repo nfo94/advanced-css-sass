@@ -1,5 +1,4 @@
 .card{
-
   // FUNCTIONALITY
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -19,6 +18,7 @@
     transform-style: preserve-3d;
     border-radius: 3px;
     box-shadow: 0 1.5rem 40px rgba($color-black, .15);
+    overflow: hidden;
 
     &--front{
       background-color: $color-white;
@@ -46,12 +46,21 @@
   }
 
   // FRONT SIDE STYLING
-    &__picture{
-      background-size: cover;
+  &__picture{
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-      &--1{
-        background-image: url(../../img/nat-5.jpg);
+    &--1{
+      background-image:
+        linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ), 
+        url(../img/nat-5.jpg);
 
-      }
-    }  
+    }
+  }  
 }
