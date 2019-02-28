@@ -369,7 +369,8 @@ body {
   .bg-video__content {
     height: 100%;
     width: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    overflow: hidden; }
 
 .section-about {
   background: #f7f7f7;
