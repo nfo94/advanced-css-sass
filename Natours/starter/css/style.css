@@ -365,12 +365,12 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .15; }
+  opacity: .15;
+  overflow: hidden; }
   .bg-video__content {
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    overflow: hidden; }
+    object-fit: cover; }
 
 .section-about {
   background: #f7f7f7;
