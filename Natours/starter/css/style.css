@@ -384,7 +384,8 @@ body {
   border: none;
   border-bottom: 3px solid transparent;
   width: 90%;
-  display: block; }
+  display: block;
+  transition: all .3s; }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -393,12 +394,25 @@ body {
     border-bottom: 3px solid #ff7730; }
   .form__input::-webkit-input-placeholder {
     color: #999; }
-  .form__input__label {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-left: 2rem;
-    margin-top: .7rem;
-    display: block; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden; }
+
+.form__radio-group {
+  width: 30%;
+  display: inline-block; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer; }
 
 .section-about {
   background: #f7f7f7;

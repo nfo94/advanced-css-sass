@@ -13,6 +13,7 @@
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
+    transition: all .3s;
 
     &:focus{
       outline: none;
@@ -27,16 +28,28 @@
     &::-webkit-input-placeholder{
       color: $color-grey-dark-2;
     }
-
-    &__label{
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-left: 2rem;
-      margin-top: .7rem;
-      display: block;
-    }
   }
 
+  &__label{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+  }
+
+  &__input:placeholder-shown + &__label{
+    opacity: 0;
+    visibility: hidden;
+  }  
   
-  
+  &__radio-group{
+    width: 30%;
+    display: inline-block;
+  }
+
+  &__radio-label{
+    font-size: $default-font-size;
+    cursor: pointer;
+  }
 }
