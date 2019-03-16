@@ -2,6 +2,7 @@
   background-color: $color-grey-dark-3;
   padding: 10rem 0;
   font-size: 1.4rem;
+  color: $color-grey-light-1;
 
   &__logo-box{
     text-align: center;
@@ -14,13 +15,13 @@
   }
 
   &__navigation{
-    border-top: 1px solid $color-grey-light-2;
+    border-top: 1px solid $color-grey-dark;
     padding-top: 2rem;
     display: inline-block;
   }
 
   &__list{
-    list-style-type: none;
+    list-style: none;
   }
 
   &__item{
@@ -35,7 +36,7 @@
     &:link,
     &:visited{
       color: $color-grey-light-1;
-      backgroun-color: $color-grey-light-1;
+      background-color: $color-grey-dark-3;
       text-transform: uppercase;
       text-decoration: none;
       display: inline-block;
@@ -48,5 +49,12 @@
       box-shadow: 0 1rem 2rem rgba($color-black, .4);
       transform: rotate(5deg) scale(1.3);
     }
+  }
+
+  &__copyright{
+    border-top: 1px solid $color-grey-dark;
+    padding-top: 2rem;
+    width: 80%;
+    float: right;
   }
 }
