@@ -23,6 +23,8 @@
     right: 6.5rem;
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1000;
+
+    transform: scale(50);
   }
 
   &__nav{
@@ -30,7 +32,7 @@
     width: 100%;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 1500;
   }
 
@@ -39,5 +41,35 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    list-style: none;
+    text-align: center;
+  }
+
+  &__link{
+    &:link,
+    &:visited{
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      padding: 1rem 2rem;
+      background-size: 230%;
+      transition: all .4s;
+    }
+
+    &:hover,
+    &:active{
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
+    
+  }
+
+  &__item{
+    margin: 1rem;
   }
 }
