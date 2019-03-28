@@ -12,3 +12,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+//MEDIA QUERY MANAGER
+/*
+  *0 - 600px Phone
+  *600 - 900px Tablet portrait
+  *900 - 1200px Tablet landscap
+  *1200 - 1800px This style
+  *1800+ Big desktop 
+*/
+
+@mixin respond-phone {
+  @media (max-width: 600px) { @content };
+}

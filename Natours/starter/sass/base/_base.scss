@@ -6,7 +6,15 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  @media (max-width: 600px){
+    font-size: 50%;
+  } 
+  @include respond-phone{
+    font-size: 50%; 
+  }
+}
 
 body {
-  box-sizing: inherit; }
+  box-sizing: inherit; 
+}
