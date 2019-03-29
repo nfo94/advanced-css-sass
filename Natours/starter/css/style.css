@@ -5,6 +5,12 @@
   *1200 - 1800px This style
   *1800+ Big desktop 
 */
+/*
+- phone
+- tablet-portrait
+- tablet-landscape
+- bigger-desktop
+*/
 *,
 *::after,
 *::before {
@@ -17,7 +23,13 @@ html {
   @media (max-width: 600px) {
     html {
       font-size: 50%; } }
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 1800px) {
     html {
       font-size: 50%; } }
 

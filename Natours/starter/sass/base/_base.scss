@@ -7,10 +7,20 @@
 
 html {
   font-size: 62.5%;
-  @media (max-width: 600px){
-    font-size: 50%;
-  } 
-  @include respond-phone{
+
+  @include respond(phone){
+    font-size: 50%; 
+  }
+
+  @include respond(tablet-portrait){
+    font-size: 50%; 
+  }
+
+  @include respond(tablet-landscape){
+    font-size: 50%; 
+  }
+
+  @include respond(bigger-desktop){
     font-size: 50%; 
   }
 }
