@@ -18,16 +18,11 @@
   *0 - 600px Phone
   *600 - 900px Tablet portrait
   *900 - 1200px Tablet landscap
-  *1200 - 1800px This style
+  *1200 - 1800px Normal styles
   *1800+ Big desktop 
-*/
 
-@mixin respond-phone {
-  @media (max-width: 600px) { @content };
-}
-
-// $breakpoint
-/*
+ $breakpoint:
+ 
 - phone
 - tablet-portrait
 - tablet-landscape
@@ -35,16 +30,24 @@
 */
 
 @mixin respond($breakpoint) {
-  @if $breakpoint == phone{
-    @media(max-width: 600px){ @content }; 
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
   }
-  @if $breakpoint == tablet-portrait{
-    @media(max-width: 900px){ @content };
+  @if $breakpoint == tablet-portrait {
+    @media (max-width: 56.25em) {
+      @content;
+    }
   }
-  @if $breakpoint == tablet-landscape{
-    @media(max-width: 1200px){ @content };
+  @if $breakpoint == tablet-landscape {
+    @media (max-width: 75em) {
+      @content;
+    }
   }
-  @if $breakpoint == bigger-desktop{
-    @media(min-width: 1800px){ @content };
+  @if $breakpoint == bigger-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
   }
 }

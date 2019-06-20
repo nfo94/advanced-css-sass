@@ -3,28 +3,28 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit;
+}
 
 html {
   font-size: 62.5%;
 
-  @include respond(phone){
-    font-size: 50%; 
+  @include respond(tablet-landscape) {
+    font-size: 56.25%;
   }
-
-  @include respond(tablet-portrait){
-    font-size: 50%; 
+  @include respond(tablet-portrait) {
+    font-size: 50%;
   }
-
-  @include respond(tablet-landscape){
-    font-size: 50%; 
-  }
-
-  @include respond(bigger-desktop){
-    font-size: 50%; 
+  @include respond(bigger-desktop) {
+    font-size: 75%;
   }
 }
 
 body {
-  box-sizing: inherit; 
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tablet-portrait) {
+    padding: 0;
+  }
 }
