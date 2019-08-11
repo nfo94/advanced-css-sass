@@ -3,6 +3,10 @@
   height: 3.25rem;
   margin-left: 2rem;
   cursor: pointer;
+
+  @media only screen and (max-width: $bp-smallest) {
+    display: none;
+  }
 }
 
 /*SEARCH*/
@@ -72,6 +76,9 @@
     height: 100%;
     display: flex;
     align-items: center;
+    @media only screen and (max-width: $bp-smallest) {
+      padding: .2rem;
+    }
   }
 
   & > *:hover {
@@ -112,15 +119,26 @@
 
 /*SIDE NAV*/
 .side-nav {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   list-style: none;
   margin-top: 3.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    display: block;
+  }
 
   &__item {
     position: relative;
 
-    &:not(:last-child) {
-      margin-bottom: 0.5rem;
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+      margin-bottom: 0;
     }
   }
 
@@ -153,11 +171,19 @@
     text-decoration: none;
     text-transform: uppercase;
     display: block;
-    padding: 1.5rem 3rem;
+    padding: 1rem 2.5rem;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 1000;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      padding: .5rem 2rem;
+      font-size: 1.1rem;
+    }
   }
 
   &__icon {
@@ -174,6 +200,10 @@
   font-size: 1.2rem;
   padding: 2.5rem;
   color: var(--color-grey-light-4);
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 /*HOTEL VIEW*/
@@ -193,17 +223,32 @@
   align-items: center;
   border-bottom: var(--line);
 
+  @media only screen and (max-width: $bp-smallest) {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
   &__heading {
     font-size: 2.25rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: .5rem;
+      font-size: 2rem;
+    }
   }
 
   &__stars {
     margin-right: auto;
     display: flex;
+    @media only screen and (max-width: $bp-smallest) {
+      margin-right: unset;
+    }
   }
 
   &__location {
@@ -234,6 +279,10 @@
     justify-content: center;
     flex-direction: column;
 
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 0;
+    }
+
     &-average {
       font-size: 2.25rem;
       font-weight: 300;
@@ -257,6 +306,14 @@
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 1.5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    margin-bottom: .8rem;
+  }
 
   & span {
     margin-left: 3px;
@@ -297,7 +354,7 @@
 //list
 .list {
   list-style: none;
-  padding: 3rem 0;
+  padding: 1rem 0;
   border-top: var(--line);
   border-bottom: var(--line);
   display: flex;
@@ -306,6 +363,10 @@
   &__item {
     flex: 0 0 50%;
     margin-bottom: 0.7rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 0; 
+    }
   }
 
   &__item::before {
@@ -332,6 +393,17 @@
   display: flex;
   align-items: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    flex-wrap: wrap;
+  }
+  
+  &__friends {
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 1rem;
+    }
+  }
+
   &__count {
     margin-right: auto;
   }
@@ -343,7 +415,7 @@
     border: 3px solid #fff;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
@@ -356,10 +428,20 @@
   margin-bottom: 3.5rem;
   position: relative;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1.5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
   &__text {
     margin-bottom: 2rem;
     z-index: 10;
     position: relative;
+    font-style: italic;
   }
 
   &__user {
@@ -396,6 +478,10 @@
     color: var(--color-primary);
     font-size: 2.2rem;
     font-weight: 300;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0;
+    }
   }
 
   &::before {
@@ -408,6 +494,16 @@
     color: var(--color-grey-light-4);
     font-family: sans-serif;
     z-index: 1;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 13rem;
+      top: -7rem;
+       left: -1rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }   
   }
 }
 
@@ -421,6 +517,10 @@
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -441,6 +541,10 @@
   position: relative;
   overflow: hidden;
 
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 1.4rem;
+  }
+
   & > * {
     display: inline-block;
     height: 100%;
@@ -450,6 +554,10 @@
 
   &__visible {
     padding: 2rem 7.5rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 1.5rem 7rem;
+    }
   }
 
   &__invisible {
