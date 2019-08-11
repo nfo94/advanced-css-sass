@@ -3,5 +3,3 @@
 Natours:
 ![](Natours.png)
 
-Trillo:
-![](Trillo.png)
